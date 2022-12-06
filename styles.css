@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+  font-family: Arial, Helvetica;
+  background: linear-gradient(45deg, aqua, rgb(129, 6, 129));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  max-width: 1000px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  border-radius: 10px;
+  background-color: rgb(214, 213, 213);
+  padding: 40px;
+}
+
+.inputsInformation {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  padding: 0 10px;
+}
+
+.labelsInputsContainers {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.labelsInputsContainers label {
+  font-size: 20px;
+}
+
+.labelsInputsContainers input {
+  height: 50px;
+  padding-left: 20px;
+  border-radius: 10px;
+  border: none;
+}
+
+.labelsInputsContainers input:focus {
+  outline: 3px solid rgb(53, 165, 128);
+  transition: 0.2s;
+}
+
+.tipPercentajeContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.tipPercentajeContainer button {
+  background-color: rgb(22, 230, 230);
+  width: 100px;
+  height: 50px;
+  color: black;
+  border: 3px solid black;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.tipPercentajeContainer button:hover {
+  background-color: rgb(7, 199, 199);
+  color: white;
+  transition: 0.2s;
+}
+
+.tipButtonActive {
+  background-color: black;
+  color: white;
+}
+
+.tipPercentajeContainer input {
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+}
+
+.labelMessageErrorContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  visibility: visible;
+}
+
+.labelMessageErrorContainer span {
+  color: red;
+  visibility: hidden;
+}
+
+.outputInformation {
+  width: 50%;
+  padding: 40px 50px;
+  background-color: rgb(7, 145, 99);
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 150px;
+}
+
+.totalInfoContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.totalInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.totalInfo span {
+  font-size: 30px;
+}
+
+.totalInfoLabelInputs {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.totalInfoLabelInputs label,
+.totalInfoLabelInputs span {
+  font-size: 20px;
+}
+
+.resetButton {
+  height: 50px;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: rgb(22, 230, 230);
+  cursor: pointer;
+}
+
+@media (max-width: 660px) {
+  main {
+    flex-direction: column;
+    max-width: 500px;
+    justify-content: center;
+  }
+
+  .inputsInformation {
+    width: 100%;
+  }
+
+  .outputInformation {
+    width: 100%;
+  }
+}

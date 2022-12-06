@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Tip Calculator App</title>
+  </head>
+  <body>
+    <main class="content">
+      <div class="inputsInformation">
+        <div class="labelsInputsContainers">
+          <label for="Bill">Bill</label>
+          <input id="billInput" type="number" placeholder="$" />
+        </div>
+
+        <div class="labelsInputsContainers">
+          <label for="Tip %">Select Tip %</label>
+          <div class="tipPercentajeContainer">
+            <button type="button" class="tipButton">5%</button>
+            <button type="button" class="tipButton">10%</button>
+            <button type="button" class="tipButton">15%</button>
+            <button type="button" class="tipButton">25%</button>
+            <button type="button" class="tipButton">50%</button>
+            <input type="number" id="tipInput" placeholder="%" />
+          </div>
+        </div>
+
+        <div class="labelsInputsContainers">
+          <div class="labelMessageErrorContainer">
+            <label for="Number of people">Number of people</label>
+            <span class="errorMessage" id="errorMessage"
+              >Must be greather than zero</span
+            >
+          </div>
+          <input
+            type="number"
+            placeholder="Number of people"
+            id="peopleInput"
+          />
+        </div>
+      </div>
+
+      <div class="outputInformation">
+        <div class="totalInfoContainer">
+          <div class="totalInfo">
+            <div class="totalInfoLabelInputs">
+              <label for="Tip amount">Tip amount</label>
+              <span>/ person</span>
+            </div>
+            <span id="tipTotal">$0.00</span>
+          </div>
+
+          <div class="totalInfo">
+            <div class="totalInfoLabelInputs">
+              <label for="Total">Total</label>
+              <span>/ person</span>
+            </div>
+            <span id="totalSpent">$0.00</span>
+          </div>
+        </div>
+
+        <button id="resetButton" class="resetButton">RESET</button>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
